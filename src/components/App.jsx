@@ -13,7 +13,7 @@ export const App = () => {
 
   useEffect(() => {
     dispatch(getContactsThunk());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
