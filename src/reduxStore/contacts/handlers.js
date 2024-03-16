@@ -1,6 +1,5 @@
 export const handlerAllContacts = (state, { payload }) => {
   state.items = payload;
-  state.isLoading = false;
 };
 
 export const handlePending = state => {
@@ -9,7 +8,6 @@ export const handlePending = state => {
 };
 
 export const handleRejected = (state, { error }) => {
-  state.isLoading = false;
   state.error = error.message;
 };
 
@@ -19,4 +17,8 @@ export const handleDeleteContact = (state, { payload }) => {
 
 export const handleAddContact = (state, { payload }) => {
   state.items = [...state.items, payload];
+};
+
+export const handleFulfilled = state => {
+  state.isLoading = false;
 };
