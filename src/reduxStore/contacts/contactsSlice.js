@@ -23,7 +23,6 @@ const contactsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(getContactsThunk.fulfilled, handlerAllContacts)
-      .addCase(getContactsThunk.rejected, handleRejected)
       .addCase(deleteContactThunk.fulfilled, handleDeleteContact)
       .addCase(addContactThunk.fulfilled, handleAddContact)
       .addMatcher(action => action.type.endsWith('pending'), handlePending)
